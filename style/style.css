@@ -1,70 +1,123 @@
+/* Default styles for smaller screens (mobile-first approach) */
+body {
+    font-family: sans-serif;
+    margin: 20px; /* Add some margin around the card on smaller screens */
+    background-color: #f4f4f4; /* Example background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+}
+
 .container {
-    /* Existing styles for the container */
-    width: 300px; /* Example width */
-    background-color: white; /* Example background */
-    padding: 20px; /* Example padding */
-    border-radius: 10px; /* Example rounded corners */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Example shadow */
+    width: 100%; /* Make the container take full width by default */
+    max-width: 350px; /* Set a maximum width for larger mobile screens */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .image {
-    width: 100%; /* Make the illustration image responsive within the container */
-    border-radius: 5px; /* Optional: round the corners of the image */
-    margin-bottom: 15px; /* Add some space below the image */
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 h1 {
-    color: black; /* Changed text color to black */
+    color: black;
     background-color: hsl(47, 88%, 63%);
-    padding: 5px 10px; /* Optional: Add some padding for better visual appearance */
-    display: inline-block; /* Ensure background only takes the width of the text */
+    padding: 5px 10px;
+    display: inline-block;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 p {
-    font-size: 0.9rem; /* Slightly smaller font size for paragraphs */
-    color: hsl(0, 0%, 50%); /* Example color */
-    line-height: 1.5; /* Improve readability */
+    font-size: 0.9rem;
+    color: hsl(0, 0%, 50%);
+    line-height: 1.5;
     margin-bottom: 10px;
 }
 
 .publish-date {
-    color: black; /* Set the text color to black */
-    font-size: 0.8rem; /* You might want to adjust the font size as well */
-    margin-bottom: 5px; /* Adjust the margin below if needed */
+    color: black;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
 }
 
 h2 {
-    color: hsl(0, 0%, 7%); /* Example color */
+    color: hsl(0, 0%, 7%);
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 1.5rem;
-    cursor: pointer; /* Indicate it's interactive */
-    font-style: bold; /* Make the title bold */
+    cursor: pointer;
+    font-style: bold;
 }
 
 h2:hover {
-    color: hsl(47, 88%, 63%); /* Example hover color */
+    color: hsl(47, 88%, 63%);
 }
 
 .author-info {
-    display: flex; /* Enable flexbox for the author info div */
-    align-items: center; /* Vertically align items in the center */
+    display: flex;
+    align-items: center;
     margin-top: 20px;
 }
 
 .author-info img {
-    width: 40px; /* Adjust the size of the avatar */
-    border-radius: 50%; /* Make it circular */
-    margin-right: 10px; /* Add some space between the image and text */
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 .author-info p {
-    margin: 0; /* Remove default margins from the paragraph */
-    color: hsl(0, 0%, 7%); /* Example color for the name */
-    font-weight: bold; /* Make the name bold */
+    margin: 0;
+    color: hsl(0, 0%, 7%);
+    font-weight: bold;
 }
 
-.attribution { font-size: 11px; text-align: center; margin-top: 20px; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media query for larger screens (e.g., tablets and desktops) */
+@media (min-width: 600px) {
+    .container {
+        width: 375px; /* Increase the fixed width for larger screens */
+        padding: 30px; /* Adjust padding for more space */
+    }
+
+    h1 {
+        font-size: 1.75rem; /* Slightly larger heading on desktop */
+    }
+
+    p {
+        font-size: 1rem; /* Slightly larger paragraph text on desktop */
+    }
+
+    h2 {
+        font-size: 1.75rem; /* Slightly larger subheading on desktop */
+    }
+
+    .author-info img {
+        width: 48px; /* Slightly larger avatar on desktop */
+    }
+
+    .attribution {
+        font-size: 12px; /* Slightly larger attribution text on desktop */
+    }
+}
+
+/* You can add more media queries for even larger screens if needed */
+@media (min-width: 900px) {
+    .container {
+        width: 450px; /* Further increase width for larger desktops */
+    }
+}
